@@ -1,0 +1,1 @@
+ffuf -c -w directory-list-2.3-medium.txt -u https://fsgateway.amexgbt.com/ftp-web/app/FUZZ -fs 1648 -t 200
