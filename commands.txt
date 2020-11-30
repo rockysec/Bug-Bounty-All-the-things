@@ -1,2 +1,5 @@
 ffuf -c -w directory-list-2.3-medium.txt -u https://domain.com/path1/path2/FUZZ -fs 1648 -t 200
 nmap -p- -sS --min-rate 5000 -vvv -n --open -T5 -Pn -iL alldomains.txt
+nmap -sV -A -p21,22,80,443 X.X.X.X
+nuclei -l urllist_clean.txt -t cves/ > nuclei_cve_detect.csv
+nuclei -l urllist_clean.txt -t panels/ > nuclei_tech_detect.csv
